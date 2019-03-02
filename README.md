@@ -20,10 +20,16 @@
 
 ### Nerdtree
 
-| Keys     | Descrition         |
-| -------- | ------------------ |
-| `Ctrl+n` | Toggle NerdTree    |
-| `Enter`  | Open child or file |
-| `t`      | Open in new tab    |
+| Keys     | Descrition                                                   |
+| -------- | ------------------------------------------------------------ |
+| `Ctrl+n` | Toggle NerdTree                                              |
+| `Enter`  | Open child or file                                           |
+| `m`      | Open contxt menu, create directory or new file, move file... |
+| `r`      | Refresh selected node                                        |
+| `t`      | Open in new tab                                              |
 
 ### FZF
+
+| Keys     | Descrition |
+| -------- | ---------- |
+| `Ctrl+p` | Start FZF  |
