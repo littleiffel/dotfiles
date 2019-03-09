@@ -51,6 +51,7 @@ if [ $task == "--apt-get-installs" ]; then
         htop \
         neovim \
         tmux \
+	zsh
         
 
 elif [ $task == "--set-up-nvim-plugins" ]; then

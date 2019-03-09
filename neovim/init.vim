@@ -20,6 +20,9 @@ Plug 'vim-airline/vim-airline'
 " neomake
 Plug 'neomake/neomake'
 
+" Syntax highlightin
+Plug 'elixir-editors/vim-elixir'
+
 call plug#end()
 
 
