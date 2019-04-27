@@ -33,3 +33,25 @@
 | Keys     | Descrition |
 | -------- | ---------- |
 | `Ctrl+p` | Start FZF  |
+
+## TMUX Shortcuts
+
+| Keys            | Description                               |
+| --------------- | ------------------------------------------|
+| `Ctrl+b` -> PgUp| Go into Scroll mode Up                    |
+| `q`             | Leave Scroll Mode                         |
+| `Ctrl+b` -> c   | Create a new Window                       |
+| `Ctrl+b` -> x   | Kill current Window                       |
+| `Ctrl+b` -> <numb> | Switch to terminal <numb>              |
+| `Ctrl+b` -> `d` | Detach current tmu session                |
+| `Ctrl+b` -> Arrow Keys | Switch current window              |
+| `Ctrl+b` -> Ctrl+Arrows | Change dimensions of current window |
+
+### Tmux Commands
+
+| Command         | Description                               |
+| --------------- | ----------------------------------------- |
+| `tmux ls`       | List tmux sessions                        |
+| `tmux a`        | Attach to last used session               |
+| `tmux a -t <session name>`| Attach to session with name     |
+
