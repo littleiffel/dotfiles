@@ -17,6 +17,8 @@
 | `Ctrl+w` `l`    | Switch to right buffer                      |
 | `Ctrl+w` `h`    | Switch to left buffer                       |
 | 2x `Ctrl+w`     | Toggle buffer                               |
+| `Ctrl+j/k`      | Delete line below or above (CUSTOM)         |
+| `Alt+j/k`       | Insert line below or above (CUSTOM)         |
 
 ### Nerdtree
 
