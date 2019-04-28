@@ -19,6 +19,7 @@
 | 2x `Ctrl+w`     | Toggle buffer                               |
 | `Ctrl+j/k`      | Delete line below or above (CUSTOM)         |
 | `Alt+j/k`       | Insert line below or above (CUSTOM)         |
+| `Ctrl+o`        | Go back to Previous Buffer                  |
 
 ### Nerdtree
 
@@ -29,6 +30,7 @@
 | `m`      | Open contxt menu, create directory or new file, move file... |
 | `r`      | Refresh selected node                                        |
 | `t`      | Open in new tab                                              |
+| `?`      | Open Help of nerdtree                                        |
 
 ### FZF
 
