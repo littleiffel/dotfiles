@@ -24,6 +24,9 @@ Plug 'neomake/neomake'
 Plug 'elixir-editors/vim-elixir'
 Plug 'elmcast/elm-vim'
 
+" Editorconfig
+Plug 'editorconfig/editorconfig-vim'
+
 call plug#end()
 
 
