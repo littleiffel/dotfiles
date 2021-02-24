@@ -50,6 +50,8 @@
 | `Ctrl+b` -> `d` | Detach current tmu session                |
 | `Ctrl+b` -> Arrow Keys | Switch current window              |
 | `Ctrl+b` -> Ctrl+Arrows | Change dimensions of current window |
+| `Ctrl+b` -> `%`| Split pane vertically |
+| `Ctrl+b` -> `"`| Split pane horizontally |
 
 ### Tmux Commands
 
@@ -58,4 +60,6 @@
 | `tmux ls`       | List tmux sessions                        |
 | `tmux a`        | Attach to last used session               |
 | `tmux a -t <session name>`| Attach to session with name     |
+| `tmux new -s <session_name> `| Create a new session with session_name |
+
 

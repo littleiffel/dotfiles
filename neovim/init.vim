@@ -22,7 +22,7 @@ Plug 'neomake/neomake'
 
 " Syntax highlightin
 Plug 'elixir-editors/vim-elixir'
-Plug 'elmcast/elm-vim'
+" Plug 'elmcast/elm-vim'
 
 " Editorconfig
 Plug 'editorconfig/editorconfig-vim'
