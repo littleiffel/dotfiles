@@ -51,7 +51,9 @@ if [ $task == "--apt-get-installs" ]; then
         htop \
         neovim \
         tmux \
-	zsh
+	zsh \
+	curl \
+	fonts-powerline
         
 
 elif [ $task == "--set-up-nvim-plugins" ]; then

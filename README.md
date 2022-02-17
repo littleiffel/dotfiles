@@ -6,6 +6,8 @@
 
 `ìnstall-symlinks.sh` sets symlinks
 
+Run `setup.sh` to install packages and configure NVIM. Then open a new terminal and install Oh-My-ZSH. https://ohmyz.sh/#install
+
 ## Vim shortcuts
 
 | Keys            | Descrition                                  |
