@@ -53,9 +53,13 @@ if [ $task == "--apt-get-installs" ]; then
         tmux \
 	zsh \
 	curl \
-	fonts-powerline
-        
-
+	fonts-powerline \
+        wget \
+        gpg 
+    LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+')
+    download "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz" lazygit.tar.gz
+    sudo tar xf lazygit.tar.gz -C /usr/local/bin lazygit
+    
 elif [ $task == "--set-up-nvim-plugins" ]; then
     dest=~/.local/share/nvim/site/autoload/plug.vim 
     mkdir -p $(dirname $dest)
