@@ -46,20 +46,38 @@ download() {
 }
 
 if [ $task == "--apt-get-installs" ]; then
+    if ! command -v lazygit &> /dev/null
+    then    
+	LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+')
+        download "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz" lazygit.tar.gz
+        sudo tar xf lazygit.tar.gz -C /usr/local/bin lazygit
+    fi
+    #VSCode
+    if [[ -f "/etxc/apt/sources.list.d/vscode.list" ]]; then
+	echo "VSCode repo already exists"
+    else
+	wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+    	sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
+    	sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+    	rm -f packages.microsoft.gpg
+    fi
+    sudo apt-get update 
+    sudo apt install apt-transport-https
     sudo apt-get update && \
     sudo apt-get install \
         htop \
         neovim \
         tmux \
-	zsh \
-	curl \
-	fonts-powerline \
+        zsh \
+        curl \
+        fonts-powerline \
         wget \
-        gpg 
-    LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[0-9.]+')
-    download "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz" lazygit.tar.gz
-    sudo tar xf lazygit.tar.gz -C /usr/local/bin lazygit
-    
+        gpg \
+	code \
+	autotools-dev \
+	automake \
+	liblzma-dev
+
 elif [ $task == "--set-up-nvim-plugins" ]; then
     dest=~/.local/share/nvim/site/autoload/plug.vim 
     mkdir -p $(dirname $dest)
