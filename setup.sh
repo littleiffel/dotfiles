@@ -9,9 +9,7 @@ function showHelp() {
     echo "recommended order."
     echo
     echo "  --apt-get-installs    (installs a bunch of useful Ubuntu packages)"
-    echo "  --set-up-nvim-plugins (manually add vim-plug)"
-    echo "  --install-fzf         (installs fzf)"
-    echo "  --install-ag          (installs ag)"
+    echo "  --setup-nvim-plugins (manually add vim-plug)"
     echo
     echo
     exit 0
@@ -63,22 +61,23 @@ if [ $task == "--apt-get-installs" ]; then
     fi
     sudo apt-get update 
     sudo apt install apt-transport-https
-    sudo apt-get update && \
-    sudo apt-get install \
+    sudo apt-add-repository -y ppa:fish-shell/release-3 
+    sudo apt-get -y install \
         htop \
         neovim \
         tmux \
-        zsh \
         curl \
-        fonts-powerline \
         wget \
         gpg \
-	code \
-	autotools-dev \
-	automake \
-	liblzma-dev
+        code \
+        autotools-dev \
+        automake \
+        liblzma-dev \
+        fzf \
+        fish \
+        neofetch
 
-elif [ $task == "--set-up-nvim-plugins" ]; then
+elif [ $task == "--setup-nvim-plugins" ]; then
     dest=~/.local/share/nvim/site/autoload/plug.vim 
     mkdir -p $(dirname $dest)
     download https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim $dest
